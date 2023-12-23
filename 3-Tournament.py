@@ -22,15 +22,15 @@ p3a = Player(0, "tit for tat","" ,[], 1)
 p3b = Player(0, "tit for tat","" ,[], 1)
 p4a = Player(0, "random","" ,[], 1)
 p4b = Player(0, "random","" ,[], 1)
-p5a = Player(0, "sussy bot", "", [], 1)
-p5b = Player(0, "sussy bot", "", [], 1)
+p5a = Player(0, "suspicious tit for tat", "", [], 1)
+p5b = Player(0, "suspicious tit for tat", "", [], 1)
 p6a = Player(0, "user", "", [], 1)
 p6b = Player(0, "user", "", [], 1)
 
 players_list = [p1a, p1b, p2a, p2b, p3a, p3b, p4a, p4b, p5a, p5b]
 game_list = [p1a, p1b, p1c, p2a, p3a]
 
-pro = ["always cooperate", "always defect", "tit for tat", "random", "user", "sussy  bot"]
+pro = ["always cooperate", "always defect", "tit for tat", "random", "user", "suspicious tit for tat"]
 choices = ["cooperate", "defect"]
 
 def game(A, B, rounds):
@@ -80,43 +80,18 @@ def game(A, B, rounds):
       if B.choice == "cooperate":
         A.score = A.score + 3
         B.score = B.score + 3
-        # print("Both players chose to cooperate.")
+        # Both players choose to cooperate
       elif B.choice == "defect":
         B.score = B.score + 4
-        # print("Player 1 chose to cooperate while Player 2 chose to defect.")
+        # Player A cooperates, Player B defects
     elif A.choice == "defect":
       if B.choice == "cooperate":
         A.score = A.score + 4
-        # print("Player 1 chose to defect while Player 2 chose to cooperate")
+        # Player A defects, Player B cooperates
       elif B.choice == "defect":
         A.score = A.score + 1
         B.score = B.score + 1
-        # print("Both players chose to defect")
-    # print("Player one score:", A.score)
-    # print("Player two score:", B.score)     
-
-  #print()
-  #print("---------------------")
-  #print( A.profile, "total score:", A.score)
-  #print(B.profile, "total score:", B.score)
-  if A.score > B.score:
-    # print("Player One Wins!")
-    lol = "lol"
-  elif B.score > A.score:
-    # print("Player Two Wins!")
-    lol = "lol"    
-  else:
-    lol = "lol"
-    # print("Draw.")
-  # print("---------------------")
-
-# p1 - always cooperate
-# p2 - always defect
-# p3 - tit for tat
-# p4 - random
-
-def get_score(Player):
-  return Player.score
+        # Both player choose to defect
 
 def tournament(players, rounds_per_game, rounds_per_tournament):
   for i in range(len(players)):
