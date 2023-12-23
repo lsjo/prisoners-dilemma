@@ -34,7 +34,7 @@ for n in range(rounds):
   print("Player two score:", p2_score)
   print()
 
-# Results (voila madame)
+# Results
 print("---------------------")
 print("Player one total score:", p1_score)
 print("Player two total score:", p2_score)
