@@ -1,3 +1,8 @@
+"""
+So up until now, all this has been done with individual variables. But for this to work on a large scale, with replication and
+evolution and all that (and also easier to work with in general) I've made a class called Player for each agent in the game.
+"""
+
 import random
 
 class Player:
